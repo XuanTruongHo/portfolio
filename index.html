@@ -2,76 +2,160 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Travis – Tư vấn đầu tư bất động sản tại Đức</title>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <!-- Tailwind Play CDN (hỗ trợ arbitrary classes như aspect-[4/3]) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Brands cho icon WhatsApp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yH1k3rV8f3f1QS5mQ5x0QKXr4k1m0c0x6l9Z3tRZx7w9r3h3T7V9pQ1m+m5HnQ3mP2I3mDkC3l5g3V0kS0bP6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="Đồng hành cùng người Việt đầu tư bất động sản tại Đức: hỗ trợ tài chính, vay ngân hàng và chiến lược đầu tư hợp pháp, an toàn, hiệu quả." />
   </head>
   <body class="bg-white text-slate-800 scroll-smooth">
-    <div id="root"></div>
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+        <h1 class="font-semibold text-lg">Travis</h1>
+        <nav class="hidden md:flex gap-6 text-sm">
+          <a href="#about" class="hover:text-slate-900">Về tôi</a>
+          <a href="#services" class="hover:text-slate-900">Dịch vụ</a>
+          <a href="#process" class="hover:text-slate-900">Quy trình</a>
+          <a href="#contact" class="hover:text-slate-900">Liên hệ</a>
+        </nav>
+        <a href="#contact" class="hidden md:inline-block bg-slate-900 text-white px-4 py-2 rounded-2xl text-sm">Đặt lịch tư vấn</a>
+      </div>
+    </header>
 
-    <script type="text/babel">
-      function PortfolioVN() {
-        const whatsappLink = "https://wa.me/49XXXXXXXXXX";
-        const email = "you@example.com";
-        const name = "Travis";
+    <!-- HERO -->
+    <section class="px-4 py-16 text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold leading-tight">
+        Đồng hành cùng người Việt đầu tư bất động sản tại Đức
+      </h2>
+      <p class="mt-4 text-slate-600 md:text-lg">
+        Hỗ trợ tài chính, vay ngân hàng và chiến lược đầu tư để bạn tự tin sở hữu bất động sản hợp pháp và hiệu quả.
+      </p>
+      <div class="mt-6 flex flex-col sm:flex-row justify-center gap-3">
+        <a id="wa-hero" href="#" target="_blank" rel="noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-2xl inline-flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-xl"></i> Nhắn tôi qua WhatsApp
+        </a>
+        <a id="email-hero" href="#" class="border border-slate-300 px-5 py-3 rounded-2xl">Gửi email</a>
+      </div>
+    </section>
 
-        return (
-          <div className="min-h-screen">
-            <header className="sticky top-0 z-50 bg-white shadow-sm">
-              <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-                <h1 className="font-semibold text-lg">{name}</h1>
-                <nav className="hidden md:flex gap-6 text-sm">
-                  <a href="#about">Về tôi</a>
-                  <a href="#services">Dịch vụ</a>
-                  <a href="#contact">Liên hệ</a>
-                </nav>
-                <a href="#contact" className="hidden md:block bg-slate-800 text-white px-4 py-2 rounded-2xl text-sm">
-                  Đặt lịch tư vấn
-                </a>
-              </div>
-            </header>
+    <!-- ABOUT -->
+    <section id="about" class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-5 gap-8">
+      <div class="md:col-span-2">
+        <div class="aspect-[4/3] w-full rounded-2xl bg-slate-200/60 grid place-items-center text-slate-500">
+          Ảnh chân dung / logo
+        </div>
+      </div>
+      <div class="md:col-span-3">
+        <h2 class="text-2xl md:text-3xl font-semibold">Về tôi</h2>
+        <p class="mt-3 text-slate-700">
+          Tôi là Travis – nhà đầu tư cá nhân trong lĩnh vực bất động sản tại Đức, hiện sở hữu và quản lý nhiều bất động sản tại Berlin. Tôi có kiến thức về tài chính, luật thuê nhà (Mietrecht), luật thuế (Steuerrecht) và chứng chỉ tư vấn tài chính hợp pháp từ IHK München.
+        </p>
+        <p class="mt-3 text-slate-700">
+          Tôi từng bắt đầu như nhiều người Việt khác – đi làm, tích lũy và đối mặt với không ít khó khăn. Vì vậy, tôi mong được đồng hành cùng bạn trong hành trình xây dựng tài sản hợp pháp, an toàn và bền vững tại Đức.
+        </p>
+      </div>
+    </section>
 
-            <section className="px-4 py-16 text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-                Đồng hành cùng người Việt đầu tư bất động sản tại Đức
-              </h2>
-              <p className="mt-4 text-slate-600 md:text-lg">
-                Hỗ trợ tài chính, vay ngân hàng và chiến lược đầu tư để bạn tự tin sở hữu bất động sản hợp pháp và hiệu quả.
-              </p>
-              <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
-                <a href={whatsappLink} target="_blank" rel="noreferrer" className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-2xl">
-                  Nhắn tôi qua WhatsApp
-                </a>
-                <a href={`mailto:${email}`} className="border border-slate-300 px-5 py-3 rounded-2xl">
-                  Gửi email
-                </a>
-              </div>
-            </section>
+    <!-- SERVICES -->
+    <section id="services" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="text-2xl md:text-3xl font-semibold text-center">Dịch vụ</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="p-6 border rounded-2xl">
+          <h3 class="text-lg font-semibold mb-3">Hỗ trợ gói vay mua bất động sản</h3>
+          <ul class="text-sm text-slate-700 space-y-2 list-disc pl-5">
+            <li>Phân tích khả năng tài chính</li>
+            <li>So sánh điều kiện và lãi suất từ gần 500 ngân hàng tại Đức</li>
+            <li>Thương lượng điều kiện vay tối ưu</li>
+            <li>Hướng dẫn chuẩn bị hồ sơ vay</li>
+          </ul>
+        </div>
+        <div class="p-6 border rounded-2xl">
+          <h3 class="text-lg font-semibold mb-3">Tư vấn chiến lược đầu tư bất động sản</h3>
+          <ul class="text-sm text-slate-700 space-y-2 list-disc pl-5">
+            <li>Đánh giá dòng tiền và biên lợi nhuận</li>
+            <li>Phân tích tiềm năng và rủi ro đầu tư</li>
+            <li>Tư vấn quản lý danh mục đầu tư</li>
+            <li>Xây dựng chiến lược mở rộng tài sản</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-            <section id="about" className="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-5 gap-8">
-              <div className="md:col-span-2">
-                <div className="aspect-[4/3] w-full rounded-2xl bg-slate-200/60 grid place-items-center text-slate-500">
-                  Ảnh chân dung / logo
-                </div>
-              </div>
-              <div className="md:col-span-3">
-                <h2 className="text-2xl md:text-3xl font-semibold">Về tôi</h2>
-                <p className="mt-3 text-slate-700">
-                  Tôi là Travis – nhà đầu tư cá nhân trong lĩnh vực bất động sản tại Đức, hiện sở hữu và quản lý nhiều bất động sản tại Berlin. Tôi có kiến thức về tài chính, luật thuê nhà (Mietrecht), luật thuế (Steuerrecht) và chứng chỉ tư vấn tài chính hợp pháp từ IHK München.
-                </p>
-                <p className="mt-3 text-slate-700">
-                  Tôi từng bắt đầu như nhiều người Việt khác – đi làm, tích lũy và đối mặt với nhiều khó khăn. Chính vì vậy, tôi mong được đồng hành cùng bạn trong hành trình xây dựng tài sản hợp pháp, an toàn và bền vững tại Đức.
-                </p>
-              </div>
-            </section>
-          </div>
-        );
-      }
+    <!-- PROCESS -->
+    <section id="process" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="text-2xl md:text-3xl font-semibold text-center">Quy trình hợp tác</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="p-6 border rounded-2xl text-sm text-slate-700">
+          <h3 class="font-semibold mb-2">1. Tư vấn ban đầu</h3>
+          <p>Trao đổi để hiểu rõ nhu cầu và đánh giá sơ bộ tình hình tài chính của bạn.</p>
+        </div>
+        <div class="p-6 border rounded-2xl text-sm text-slate-700">
+          <h3 class="font-semibold mb-2">2. Phân tích và tư vấn phương án đầu tư</h3>
+          <p>Đưa ra giải pháp và đề xuất gói vay phù hợp dựa trên nhu cầu cá nhân.</p>
+        </div>
+        <div class="p-6 border rounded-2xl text-sm text-slate-700">
+          <h3 class="font-semibold mb-2">3. Hoàn thiện hợp đồng</h3>
+          <p>Hỗ trợ toàn bộ quá trình làm việc với ngân hàng cho đến khi hoàn tất.</p>
+        </div>
+      </div>
+      <p class="text-center text-slate-600 text-sm mt-4">Buổi tư vấn đầu tiên khoảng 30 phút – thực hiện hoàn toàn trực tuyến trên toàn nước Đức.</p>
+    </section>
 
-      ReactDOM.createRoot(document.getElementById('root')).render(<PortfolioVN />);
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="text-2xl md:text-3xl font-semibold text-center">Liên hệ</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-8">
+        <div class="p-6 border rounded-2xl text-sm text-slate-700 space-y-2">
+          <p><strong>WhatsApp:</strong> <a id="wa-link" href="#" target="_blank" rel="noreferrer" class="underline inline-flex items-center gap-2"><i class="fa-brands fa-whatsapp text-emerald-600"></i> Nhắn ngay qua WhatsApp</a></p>
+          <p><strong>Email:</strong> <a id="email-link" href="#" class="underline">you@example.com</a></p>
+          <p><strong>Điện thoại:</strong> <span id="phone-text">+49 XX XXX XXXX</span></p>
+          <p>Tư vấn trực tuyến trên toàn nước Đức</p>
+        </div>
+        <div class="p-6 border rounded-2xl">
+          <form onsubmit="event.preventDefault()" class="space-y-3">
+            <input class="w-full border rounded-lg px-3 py-2" placeholder="Họ tên" required />
+            <input class="w-full border rounded-lg px-3 py-2" type="email" placeholder="Email" required />
+            <input class="w-full border rounded-lg px-3 py-2" placeholder="Số điện thoại hoặc WhatsApp" />
+            <textarea class="w-full border rounded-lg px-3 py-2" rows="4" placeholder="Mô tả ngắn gọn về nhu cầu của bạn"></textarea>
+            <button type="submit" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-2xl w-full">Gửi yêu cầu</button>
+            <p class="text-xs text-slate-500 text-center">Tôi cam kết bảo mật thông tin của bạn.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a id="wa-float" href="#" target="_blank" rel="noreferrer" class="fixed bottom-6 right-6 bg-emerald-600 hover:bg-emerald-700 text-white p-4 rounded-full shadow-lg text-3xl" aria-label="Chat WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 py-8 mt-8 text-center text-sm text-slate-600">
+      © <span id="year"></span> Travis. Tất cả các quyền được bảo lưu.
+    </footer>
+
+    <!-- Config JS: điền các thông tin liên hệ 1 chỗ, không cần React/Babel -->
+    <script>
+      const CONFIG = {
+        whatsapp: "https://wa.me/49XXXXXXXXXX", // ← Thay bằng số WhatsApp dạng quốc tế
+        email: "you@example.com",                 // ← Thay email
+        phone: "+49 XX XXX XXXX"                  // ← Thay số điện thoại
+      };
+
+      // Gán link/nội dung cho các vị trí cần thiết
+      document.getElementById('wa-hero').setAttribute('href', CONFIG.whatsapp);
+      document.getElementById('wa-link').setAttribute('href', CONFIG.whatsapp);
+      document.getElementById('wa-float').setAttribute('href', CONFIG.whatsapp);
+
+      document.getElementById('email-hero').setAttribute('href', `mailto:${CONFIG.email}`);
+      document.getElementById('email-link').setAttribute('href', `mailto:${CONFIG.email}`);
+      document.getElementById('email-link').textContent = CONFIG.email;
+
+      document.getElementById('phone-text').textContent = CONFIG.phone;
+      document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
